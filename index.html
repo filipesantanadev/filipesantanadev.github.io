@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 class="titulo">Jogo da Memória</h1>
+  </header>
+  <main>
+    <a class="btn-start">Start</a>
+    <div id="conteudo" style="display: none;">
+      <div class="moves">Jogadas:<span id="moves-count"></span></div>
+      <div class="time">Duração:<span id="time-count"></span></div>
+      <div id="tabuleiro"></div>
+      <a class="btn-restart" href="./index.html">Restart</a>
+    </div>
+
+  </main>
+
+  <footer>
+    Developed by <a target="_blank" href="https://github.com/filipesantanadev">Filipe Santana</a>
+  </footer>
+
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script charset="utf8">
+    var app = { nrComponentes: 0 };
+    app.getComponente = function (nome) {
+      if (!app[nome]) {
+        app[nome] = {};
+        app[app.nrComponentes++] = nome;
+      }
+      return app[nome];
+    };
+  </script>
+  <script src="script.js" charset="utf8"></script>
+</body>
+
+</html>
